@@ -1,26 +1,68 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
-    color-scheme: dark;
+    font-family: "Barlow", sans-serif;
+    scroll-behavior: smooth;
   }
-  body {
-    color: white;
-    background: black;
-  }
+}
+.animate-bounce {
+  animation-duration: 20s;
+}
+
+.animate-ping {
+  animation-duration: 5s;
+}
+.animate-spin {
+  animation-duration: 20s;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    92.16deg,
+    #e63934 20.09%,
+    #9900cc 59.23%,
+    #009de0 101.24%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #009de0 100%);
+  filter: blur(120px);
+}
+
+.red__gradient {
+  background: linear-gradient(90deg, #ff0000 0%, #f8233c 100%);
+  filter: blur(120px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(200px);
+}
+
+.phone__gradient {
+  background: linear-gradient(
+    156.78deg,
+    #eb001b 3.93%,
+    #df0060 35%,
+    #1629da 61.18%,
+    #009de0 90.99%
+  );
+  filter: blur(120px);
+}
+
+.credit-debit__gradient {
+  background: linear-gradient(100deg, #eb001b 3%, #009de0 90%);
+  border-radius: 50%;
+  background-size: 90% 90%;
+  filter: blur(90px);
 }
